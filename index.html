@@ -9,6 +9,7 @@
             text-align: center;
             margin-top:20px;
             padding: 10px;
+      
         }
         button{
             background-color: blue;
@@ -22,6 +23,18 @@
             padding: 10px;
             transition: transform 1s ease-in-out;
         }
+        #CoinImg{
+            width: 150px;
+            height: 150px;
+            transition: transform 8s ease-in-out;
+            margin: 20px auto;
+            display: none;
+            
+        }
+        #ShowText{
+            font-size: 30px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +43,8 @@
         ❓
         
     </div>
+    <img id="CoinImg" alt="Coin Result">
+    <div id="ShowText"></div>
     <button onclick="flipCoin()">Flip the coin</button>
     <script src="script.js"></script>
 </body>

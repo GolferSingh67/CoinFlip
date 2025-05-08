@@ -1,16 +1,36 @@
+const heads="./Head.png"
+const tails="./Tail.png"
 function flipCoin() {
     let coin = document.getElementById("COIN");
-    coin.style.transform = "rotateY(0deg)";
-    coin.innerText = "🪙";
+    let coinImage = document.getElementById("CoinImg")
+    let resultText = document.getElementById("ShowText")
 
-    let timeout = 1000; 
+    coin.style.display="block"
+    coin.textContent = "🪙";
+    coinImage.style.display="none"
+    resultText.textContent=""
+  
+    coin.style.transform = "rotateY(0deg)";
+    setTimeout(() => {
+    coin.style.transform = "rotateY(720deg)";
+       
+     
+    }, 50);
 
     setTimeout(() => {
         let result = Math.random() < 0.5 ? "Heads" : "Tails";
-        coin.style.transform ="rotateY(720deg)";
-        setTimeout(() => {
-            coin.innerText=result==="Heads"? "🪙HEADS!":"🪙TAILS"
-        }, 500);
-    }, 800);
+        coinImage.style.display="block"
+        coin.style.display="none"
+
+        if (result==="Heads"){
+            coinImage.src=heads
+             resultText.textContent="Heads"
+        }
+        else{
+            coinImage.src=tails
+            resultText.textContent="Tails"
+        }
+    }, 500);
 }
+
 
