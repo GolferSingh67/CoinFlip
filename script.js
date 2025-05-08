@@ -15,7 +15,7 @@ function flipCoin() {
     coin.style.transform = "rotateY(720deg)";
        
      
-    }, 50);
+    }, 100);
 
     setTimeout(() => {
         let result = Math.random() < 0.5 ? "Heads" : "Tails";
